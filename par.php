@@ -16,8 +16,10 @@
     $html = curl_get('http://nimpha.ua');
     $dom = phpQuery::newDocument($html);
     $items = $dom-> find('.catalog-menu-lvl0-item');
+    
+    
 
-    //foreach($items as $item){
+   // foreach($items as $item){    
         $count = 1;
     	$a = pq($items)->find('a');
     	echo $a->attr('href') . '<br>';
@@ -25,7 +27,7 @@
         parse($url, $pdo, $count);
         $count++;
     	
-    //}
+   // }
 
 
 

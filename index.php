@@ -8,63 +8,57 @@
                 $obj = new Item();
 
                 if($_GET['catalog']){
-                        if($_GET['catalog'] == 1){
-                    $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 1");
-                    $data->execute();
-                    foreach($data as $dt){
-                        $obj->name = $dt['name'];
-                        $obj->link = $dt['link'];
-                        $obj->price = $dt['cost'];
-                        $obj->item_html();
+                    if($_GET['catalog'] == 1){
+                        $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 1 LIMIT 10");
+                        $data->execute();
+                        foreach($data as $dt){
+                            $obj->name = $dt['name'];
+                            $obj->link = $dt['link'];
+                            $obj->price = $dt['cost'];
+                            $obj->item_html();
+                        }
+                    }
+                    if($_GET['catalog'] == 2){
+                        $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 2 LIMIT 10");
+                        $data->execute();
+                        foreach($data as $dt){
+                            $obj->name = $dt['name'];
+                            $obj->link = $dt['link'];
+                            $obj->price = $dt['cost'];
+                            $obj->item_html();
+                        }
+                    }
+                    if($_GET['catalog'] == 3){
+                        $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 3 LIMIT 10");
+                        $data->execute();
+                        foreach($data as $dt){
+                            $obj->name = $dt['name'];
+                            $obj->link = $dt['link'];
+                            $obj->price = $dt['cost'];
+                            $obj->item_html();
+                        }
+                    }
+                    if($_GET['catalog'] == 4){
+                        $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 4 LIMIT 10");
+                        $data->execute();
+                        foreach($data as $dt){
+                            $obj->name = $dt['name'];
+                            $obj->link = $dt['link'];
+                            $obj->price = $dt['cost'];
+                            $obj->item_html();
+                        }
+                    }
+                    if($_GET['catalog'] == 5){
+                        $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 5 LIMIT 10");
+                        $data->execute();
+                        foreach($data as $dt){
+                            $obj->name = $dt['name'];
+                            $obj->link = $dt['link'];
+                            $obj->price = $dt['cost'];
+                            $obj->item_html();
+                        }
                     }
                 }
-                if($_GET['catalog'] == 2){
-                    $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 2");
-                    $data->execute();
-                    foreach($data as $dt){
-                        $obj->name = $dt['name'];
-                        $obj->link = $dt['link'];
-                        $obj->price = $dt['cost'];
-                        $obj->item_html();
-                    }
-                }
-                if($_GET['catalog'] == 3){
-                    $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 3");
-                    $data->execute();
-                    foreach($data as $dt){
-                        $obj->name = $dt['name'];
-                        $obj->link = $dt['link'];
-                        $obj->price = $dt['cost'];
-                        $obj->item_html();
-                    }
-                }
-                if($_GET['catalog'] == 4){
-                    $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 4");
-                    $data->execute();
-                    foreach($data as $dt){
-                        $obj->name = $dt['name'];
-                        $obj->link = $dt['link'];
-                        $obj->price = $dt['cost'];
-                        $obj->item_html();
-                    }
-                }
-                if($_GET['catalog'] == 5){
-                    $data = $pdo->prepare("SELECT name, link, cost FROM catalog WHERE id_category = 5");
-                    $data->execute();
-                    foreach($data as $dt){
-                        $obj->name = $dt['name'];
-                        $obj->link = $dt['link'];
-                        $obj->price = $dt['cost'];
-                        $obj->item_html();
-                    }
-                }
-                }
-
-                
-                
-                
-
-                
             ?> 
         </div>
     </main>
