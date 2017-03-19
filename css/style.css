@@ -1,0 +1,20 @@
+.navbar-brand{
+	padding: 0;
+}
+.navbar-brand > img{
+	width: 130px;
+
+}
+.item-img{
+	width: 300px;
+	height: 200px;
+	display: block;
+	float: left;
+	padding: 10px;
+}
+figure{
+	border: 1px solid gray;
+	border-radius: 5px;
+	height: 220px;
+	margin: 10px;
+}
