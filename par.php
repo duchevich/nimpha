@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php
-    ini_set('max_execution_time', 900);
+    //ini_set('max_execution_time', 900);
 
     include_once('libs/qurl.php');
     require_once('sql.php');
@@ -18,16 +18,16 @@
     $items = $dom-> find('.catalog-menu-lvl0-item');
     
     
-
-   // foreach($items as $item){    
-        $count = 1;
-    	$a = pq($items)->find('a');
+    $count = 1;
+    foreach($items as $item){    
+        
+    	$a = pq($item)->find('a');
     	echo $a->attr('href') . '<br>';
         $url = 'http://nimpha.ua' . $a->attr('href');
         parse($url, $pdo, $count);
         $count++;
-    	
-   // }
+    	echo $count;
+    }
 
 
 
